@@ -2,8 +2,10 @@ package com.example.dto;
 
 
 public enum ErrorCode {
-
-    INVALID_INPUT(400, "COMMON-001", "잘못된 입력값");
+    INVALID_REQUEST_PARAMETER_BIND(400, "COMMON-001", "유효하지 요청 파라미터 바인딩"),
+    METHOD_NOT_ALLOWED(405, "COMMON-002", "허용하지 않는 HTTP 메소드"),
+    NO_SUCH_ELEMENT(404, "COMMON-003", "존재하지 않는 값을 가져오려 함"),
+    UNEXPECTED_EXCEPTION(400, "COMMON-004", "예상하지 못한 예외");
 
     private final int status;
     private final String code;
